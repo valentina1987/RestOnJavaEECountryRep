@@ -3,8 +3,8 @@
 This clickstart integrates rest functionalities on JavaEE container (Jboss), using:
 
 		EJB 3.2
-		Jersey 1.8
-		Jboss 7
+		Jersey 1.9
+		Jboss 7.2
 		Java 6
 
 Press the button to build, test and deploy this instantly:
