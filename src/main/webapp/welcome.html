@@ -1,0 +1,143 @@
+
+
+<HTML>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script
+	src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="jscript.js"></script>
+<script src="render.js"></script>
+
+</head>
+<BODY>
+	<div id="welcome">
+		<h1>
+			<b>WELCOME!</b>
+		</h1>
+	</div>
+	<div id="outer">
+		<br> This is a simple application that runs REST services on
+		JAVAEE container using:
+		<div id=tec>
+			<br> <br> <b>JERSEY 1.9</b><br> <b>EJB 3.1</b><br>
+			<b>MYSQL</b><br> <b>JBOSS 7.2</b> <br> <br>
+		</div>
+
+		<div id="inner">
+
+			<div class=left>
+
+				<div class="t">
+					<form id="ajaxformpost" action="rest/country/" method="post">
+
+						<table align="center" id="postTable">
+							<tr>
+								<td><b>Nation</b>
+								<td><input type="text" name="name" id="nationNamePost">
+								<td>
+							</tr>
+							<tr>
+								<td><b>Capital </b></td>
+								<td><input type="text" name="capital"></td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="save"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+
+				<div class="t">
+					<form id="ajaxformupdate" action="rest/country/" method="put">
+
+						<table align="center" id="updateTable">
+							<tr>
+								<td><b>Nation</b>
+								<td><input type="text" name="name" id="nationNameUpdate">
+								<td>
+							</tr>
+							<tr>
+								<td><b>Capital </b></td>
+								<td><input type="text" name="capital"></td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="update"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+
+
+				<div class="t">
+
+					<form id="ajaxformget" action="rest/country/" method="get"
+						name="getCapitalByNation">
+						<table align="center" class="nobottomborder">
+
+							<tr>
+								<td><b>Nation</b>
+								<td><input type="text" name="nationToRetrieve"
+									id="nationName">
+								<td>
+							</tr>
+							<tr>
+								<td><b>Capital </b></td>
+								<td id="capitalRetrieved"></td>
+							</tr>
+
+							<table id="getTable" class="noupborder">
+								<tr>
+									<td><input type="submit" value="search"></td>
+									<td><input id="xmlbynamebutton" type="button"
+										value="getXml"></td>
+									<td><input id="jsonbynamebutton" type="button"
+										value="getJson"></td>
+
+								</tr>
+							</table>
+						</table>
+					</form>
+				</div>
+
+				<div class="t">
+
+					<form id="ajaxformdelete" action="rest/country/" method="get">
+						<table align="center" id="deleteTable">
+
+							<tr>
+								<td><b>Name</b>
+								<td><input type="text" id="nameToDelete">
+								<td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="Delete"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<div class="right">
+				<div class="t">
+					<tr>
+
+						<form id="ajaxformgetAll" action="rest/country/" method="get">
+
+							<table align="center" id="countries">
+
+								<tr>
+									<td><input type="submit" value="getAll"></td>
+									<td><input id="xmlbutton" type="button" value="getXml"></td>
+									<td><input id="jsonbutton" type="button" value="getJson"></td>
+								</tr>
+
+							</table>
+
+						</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="clearit"></div>
+</BODY>
+</HTML>

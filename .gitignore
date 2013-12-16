@@ -1,0 +1,19 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+
+# generated target folder #
+target
+target/*
+
+#others#
+.project
+.classpath
+.settings/*
+.settings
+
+#not wanted in the final version#
+src/main/java/localdomain/localhost/CapitalServlet.java
+src/main/java/localdomain/localhost/RestDispatcherServlet.java

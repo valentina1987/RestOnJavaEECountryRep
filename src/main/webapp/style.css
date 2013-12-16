@@ -1,0 +1,60 @@
+body {
+	font-family: Helvetica, Verdana, sans-serif;
+	background-image: url('images/world.png');
+}
+
+#welcome {
+	text-align: center;
+	color: #CC00FF;
+}
+
+#tec {
+	text-align: center;
+	color: #CC00FF;
+}
+
+#outer {
+	text-align: center;
+}
+
+#inner {
+	width: 800px;
+	height: 800px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.t {
+	
+}
+
+.output {
+	color: #CC00FF;
+	text-align: right;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: left;
+	margin-left: 160px;
+}
+
+table {
+	border: 2px solid black;
+	width: 320px;
+}
+
+.noupborder {
+	border-top: 0px;
+}
+
+.nobottomborder {
+	border-bottom: 0px;
+}
+
+#clearit {
+	clear: left;
+}
