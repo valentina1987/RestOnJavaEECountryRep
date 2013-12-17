@@ -20,10 +20,17 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * The object represents the list of countries. It requires the XmlRootElement annotation
+ * in order to be represented as xml or json object
+ * 
+ *@author valentina armenise
+ *
+ */
 @XmlRootElement
 public class CountryArray {
-	
-	List<Country> countries= new ArrayList<Country>();
+
+	List<Country> countries = new ArrayList<Country>();
 
 	public List<Country> getCountries() {
 		return countries;

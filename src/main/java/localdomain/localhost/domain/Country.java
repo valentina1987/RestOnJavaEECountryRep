@@ -20,6 +20,12 @@ import java.io.Serializable;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * object Country{name,capital}
+ * the xmlRootElement annotation makes the object to be represented as an xml element
+ * @author valentina armenise
+ *
+ */
 @Entity
 @XmlRootElement
 public class Country implements Serializable {
@@ -31,7 +37,7 @@ public class Country implements Serializable {
 	@Basic
 	private String capital;
 	@Basic
-	@Column(unique=true)
+	@Column(unique = true)
 	private String name;
 
 	public String getCapital() {

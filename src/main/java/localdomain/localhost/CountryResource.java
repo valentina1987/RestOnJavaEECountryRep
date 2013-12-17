@@ -16,6 +16,7 @@
 
 package localdomain.localhost;
 
+import static javax.ws.rs.core.MediaType.*;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -32,7 +33,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.UriInfo;
@@ -43,8 +43,13 @@ import localdomain.localhost.domain.CountryArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 /**
- * Rest services
+ * 
+ * rest services
+ * 
+ * @author valentina armenise
+ *
  */
 @Path("/country")
 @Stateless
@@ -63,59 +68,61 @@ public class CountryResource {
 	@EJB(mappedName = "java:module/CountryRepository")
 	private CountryRepository countryRepository;
 
-	@POST
-	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/")
+	@POST
+	@Consumes(APPLICATION_FORM_URLENCODED)
+	@Produces(APPLICATION_JSON)
 	public Response create(@FormParam("capital") String capital,
 			@FormParam("name") String name) {
 
 		Country country = new Country(capital, name);
 		countryRepository.create(country);
-		log.info("created country with name "+ country.getName()+" and capital "+country.getCapital());
+		log.info("created country with name {} and capital {}",
+				country.getName(), country.getCapital());
 		return Response.created(
 				uriInfo.getAbsolutePathBuilder().path(name).build()).build();
 
 	}
-	
-	@PUT
-	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	@Produces(MediaType.APPLICATION_JSON)
+
 	@Path("/")
-	public Response update(@FormParam("capital") String capital,
+	@PUT
+	@Consumes(APPLICATION_FORM_URLENCODED)
+	@Produces(APPLICATION_JSON)
+	public Response updateCountry(@FormParam("capital") String capital,
 			@FormParam("name") String name) {
 
 		Country country = new Country(capital, name);
 		countryRepository.upadte(country);
-		log.info("updated country with name "+ country.getName()+" and capital "+country.getCapital());
+		log.info("updated country with name " + country.getName()
+				+ " and capital " + country.getCapital());
 		return Response.created(
 				uriInfo.getAbsolutePathBuilder().path(name).build()).build();
 
 	}
 
-	@GET
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Path("/")
-	public Response getAll() {
-		
-		List<Country> countries=countryRepository.getAll();
-		CountryArray countryarr=new CountryArray();
-		countryarr.setCountries(countries);
-		return Response.ok(countryarr).build();	
-		
-	}
-
-	@DELETE
-	@Path("/{name}")
-	public Response delete(@PathParam ("name") String name) {
-		
-		countryRepository.delete(name);
-		return Response.noContent().build();	
-	}
-
 	@GET
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+	@Produces({APPLICATION_JSON, APPLICATION_XML })
+	public Response getAll() {
+
+		List<Country> countries = countryRepository.getAll();
+		CountryArray countryarr = new CountryArray();
+		countryarr.setCountries(countries);
+		return Response.ok(countryarr).build();
+
+	}
+
 	@Path("/{name}")
+	@DELETE
+	public Response deleteCountry(@PathParam("name") String name) {
+
+		countryRepository.delete(name);
+		return Response.noContent().build();
+	}
+
+	@Path("/{name}")
+	@GET
+	@Produces({APPLICATION_JSON, APPLICATION_XML })
 	public Response get(@PathParam("name") String name) {
 
 		try {
@@ -124,8 +131,7 @@ public class CountryResource {
 		} catch (EntityNotFoundException e) {
 			log.error("Country with name '" + name + "' not found");
 			return Response.status(Status.NOT_FOUND).build();
-		}
-		catch (NoResultException e) {
+		} catch (NoResultException e) {
 			log.error("Country with name '" + name + "' not found");
 			return Response.status(Status.NOT_FOUND).build();
 		}
