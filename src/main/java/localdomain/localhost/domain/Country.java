@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package localdomain.localhost.domain;
 
 import java.io.Serializable;
@@ -21,11 +22,11 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * object Country{name,capital}
- * the xmlRootElement annotation makes the object to be represented as an xml element
+ * object Country{name,capital} the xmlRootElement annotation makes the object
+ * to be represented as an xml element
  * 
  * @author valentina armenise
- *
+ * 
  */
 @Entity
 @XmlRootElement

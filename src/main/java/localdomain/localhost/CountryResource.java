@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2013, CloudBees Inc.
+ * Copyright 2010-2013, the original author or authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,13 +43,12 @@ import localdomain.localhost.domain.CountryArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 /**
  * 
  * rest services
  * 
  * @author valentina armenise
- *
+ * 
  */
 @Path("/country")
 @Stateless
@@ -102,7 +101,7 @@ public class CountryResource {
 
 	@Path("/")
 	@GET
-	@Produces({APPLICATION_JSON, APPLICATION_XML })
+	@Produces({ APPLICATION_JSON, APPLICATION_XML })
 	public Response getAll() {
 
 		List<Country> countries = countryRepository.getAll();
@@ -122,7 +121,7 @@ public class CountryResource {
 
 	@Path("/{name}")
 	@GET
-	@Produces({APPLICATION_JSON, APPLICATION_XML })
+	@Produces({ APPLICATION_JSON, APPLICATION_XML })
 	public Response get(@PathParam("name") String name) {
 
 		try {

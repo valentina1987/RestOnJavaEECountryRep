@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package localdomain.localhost.domain;
 
 import java.util.ArrayList;
@@ -21,11 +22,11 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * The object represents the list of countries. It requires the XmlRootElement annotation
- * in order to be represented as xml or json object
+ * The object represents the list of countries. It requires the XmlRootElement
+ * annotation in order to be represented as xml or json object
  * 
- *@author valentina armenise
- *
+ * @author valentina armenise
+ * 
  */
 @XmlRootElement
 public class CountryArray {
