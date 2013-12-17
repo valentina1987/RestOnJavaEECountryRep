@@ -13,7 +13,7 @@ Press the button to build, test and deploy this instantly:
 
 ## Running the project locally
 ```
-	git clone git@github.com:valentina1987/RestOnJavaEEScheletonProject.git
+	git clone https://github.com/valentina1987/RestOnJavaEECountryRep.git
 	mvn jboss7:run
 ```
 

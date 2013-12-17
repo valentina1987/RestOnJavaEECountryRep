@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2013, the original author or authors
+ * Copyright 2010-2013, CloudBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ import localdomain.localhost.domain.Country;
 
 @Stateless
 public class CountryRepository {
-	Logger log = LoggerFactory.getLogger(CountryRepository.class);
+	Logger logger = LoggerFactory.getLogger(CountryRepository.class);
 	@PersistenceContext
 	private EntityManager em;
 

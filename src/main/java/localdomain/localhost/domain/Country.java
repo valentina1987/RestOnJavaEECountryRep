@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2013, the original author or authors
+ * Copyright 2010-2013, CloudBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * object Country{name,capital}
  * the xmlRootElement annotation makes the object to be represented as an xml element
+ * 
  * @author valentina armenise
  *
  */

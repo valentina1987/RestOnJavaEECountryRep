@@ -29,6 +29,8 @@ import javax.ws.rs.ext.Provider;
  * This provider performs the injection and supports the @EJB annotation. This
  * class needs to be stored in the same project as REST services.
  * 
+ * @author valentina armenise
+ * 
  */
 
 @Provider

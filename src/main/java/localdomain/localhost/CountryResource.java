@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2013, the original author or authors
+ * Copyright 2010-2013, CloudBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,7 +54,7 @@ import org.slf4j.LoggerFactory;
 @Path("/country")
 @Stateless
 public class CountryResource {
-	Logger log = LoggerFactory.getLogger(CountryResource.class);
+	Logger logger = LoggerFactory.getLogger(CountryResource.class);
 
 	@Context
 	UriInfo uriInfo;
@@ -77,7 +77,7 @@ public class CountryResource {
 
 		Country country = new Country(capital, name);
 		countryRepository.create(country);
-		log.info("created country with name {} and capital {}",
+		logger.info("created country with name {} and capital {}",
 				country.getName(), country.getCapital());
 		return Response.created(
 				uriInfo.getAbsolutePathBuilder().path(name).build()).build();
@@ -93,7 +93,7 @@ public class CountryResource {
 
 		Country country = new Country(capital, name);
 		countryRepository.upadte(country);
-		log.info("updated country with name " + country.getName()
+		logger.info("updated country with name " + country.getName()
 				+ " and capital " + country.getCapital());
 		return Response.created(
 				uriInfo.getAbsolutePathBuilder().path(name).build()).build();
@@ -129,10 +129,10 @@ public class CountryResource {
 			Country country = countryRepository.findByName(name);
 			return Response.ok(country).build();
 		} catch (EntityNotFoundException e) {
-			log.error("Country with name '" + name + "' not found");
+			logger.error("Country with name '" + name + "' not found");
 			return Response.status(Status.NOT_FOUND).build();
 		} catch (NoResultException e) {
-			log.error("Country with name '" + name + "' not found");
+			logger.error("Country with name '" + name + "' not found");
 			return Response.status(Status.NOT_FOUND).build();
 		}
 
