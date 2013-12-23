@@ -4,8 +4,8 @@ This clickstart integrates rest functionalities on JavaEE container (Jboss), usi
 
 		EJB 3.2
 		Jersey 1.9
-		Jboss 7.2
-		Java 6
+		Jboss 8 (uncomment line in persistence.xml to make it work in jboss 7.2)
+		Java 7
 
 Press the button to build, test and deploy this instantly:
 
