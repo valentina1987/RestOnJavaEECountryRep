@@ -47,6 +47,10 @@ table {
 	width: 320px;
 }
 
+caption {
+	font-weight: bold
+}
+
 .noupborder {
 	border-top: 0px;
 }

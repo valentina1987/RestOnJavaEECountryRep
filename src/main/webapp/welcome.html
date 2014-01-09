@@ -21,7 +21,7 @@
 		JAVAEE container using:
 		<div id=tec>
 			<br> <br> <b>JERSEY 1.9</b><br> <b>EJB 3.1</b><br>
-			<b>MYSQL</b><br> <b>JBOSS 7.2</b> <br> <br>
+			<b>MYSQL</b><br> <b>JBOSS</b> <br> <br>
 		</div>
 
 		<div id="inner">
@@ -32,6 +32,7 @@
 					<form id="ajaxformpost" action="rest/country/" method="post">
 
 						<table align="center" id="postTable">
+							<caption>CREATE COUNTRY</caption>
 							<tr>
 								<td><b>Nation</b>
 								<td><input type="text" name="name" id="nationNamePost">
@@ -52,6 +53,7 @@
 					<form id="ajaxformupdate" action="rest/country/" method="put">
 
 						<table align="center" id="updateTable">
+							<caption>UPDATE COUNTRY</caption>
 							<tr>
 								<td><b>Nation</b>
 								<td><input type="text" name="name" id="nationNameUpdate">
@@ -74,7 +76,7 @@
 					<form id="ajaxformget" action="rest/country/" method="get"
 						name="getCapitalByNation">
 						<table align="center" class="nobottomborder">
-
+							<caption>SEARCH COUNTRY</caption>
 							<tr>
 								<td><b>Nation</b>
 								<td><input type="text" name="nationToRetrieve"
@@ -104,7 +106,7 @@
 
 					<form id="ajaxformdelete" action="rest/country/" method="get">
 						<table align="center" id="deleteTable">
-
+							<caption>DELETE COUNTRY</caption>
 							<tr>
 								<td><b>Name</b>
 								<td><input type="text" id="nameToDelete">
@@ -124,6 +126,7 @@
 						<form id="ajaxformgetAll" action="rest/country/" method="get">
 
 							<table align="center" id="countries">
+							<caption>LIST COUNTRIES</caption>
 
 								<tr>
 									<td><input type="submit" value="getAll"></td>

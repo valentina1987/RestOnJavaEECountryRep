@@ -13,11 +13,11 @@ Press the button to build, test and deploy this instantly:
 
 ## Running the project locally
 ```
-	git clone https://github.com/valentina1987/RestOnJavaEECountryRep.git
-	mvn jboss7:run
+	git clone https://github.com/valentina1987/jboss-rest-ejb-clickstart.git
+	mvn wildfly:run ( or mvn jboss7:run)
 ```
 
-You can access this web-app at: http://localhost:8080/jboss-rest-ejb-clickstart2/RestDispatcherServlet
+You can access this web-app at: http://localhost:8080/jboss-rest-ejb-clickstart/
 
 
 
