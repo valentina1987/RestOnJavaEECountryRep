@@ -37,7 +37,7 @@ If m2e is not there, just follow the install process here: http://eclipse.org/m2
 
 1) In the command line
 ```
-git clone git@github.com:valentina1987/RestOnJavaEEScheletonProject.git
+git clone git@github.com:valentina1987/jboss-rest-ejb-clickstart.git
 ```
 2) Inside Eclipse
 ```
