@@ -1,4 +1,4 @@
-# Rest Servlets and Ejb on JavaEE container
+# Rest Servlets and Ejb on JavaEE container TEST
 
 This clickstart integrates rest functionalities on JavaEE container (Jboss), using:
 
